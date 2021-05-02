@@ -1,0 +1,61 @@
+[data-anchor="team-page"] {
+    img {
+        @media only screen and (min-width: 768px) {
+            width: 90%;
+
+        }
+
+        &.we-logo {
+            right: 17%;
+            top: 28%;
+
+            @media only screen and (max-width: 767.98px) {
+                display: none;
+            }
+        }
+    }
+
+    .card {
+        border-radius: none;
+        border: none;
+        background-color: transparent;
+    }
+
+    .card-body {
+        padding: .5rem 0 1.5rem;
+        @extend %mont-serrate;
+        @extend %base-text-clr;
+        text-align: center;
+        width: 90%;
+    }
+
+    .card-title {
+        @extend %mont-serrate-semi-bold;
+        @include font-sizer(8.64);
+        margin-bottom: .5rem;
+        color: inherit;
+    }
+
+    .card-subtitle {
+        @include font-sizer(6.24);
+    }
+
+    .scroller-container {
+        @media only screen and (max-width: 767.98px){
+            margin-bottom: 20px;
+            padding-bottom: 50px;
+            background: url("../img/mobile/background/bg_common.png") no-repeat 3rem bottom #fff;
+            background-size: contain;
+        }
+    }
+
+}
+
+#team-scroller-component {
+    margin: 10% 0 0;
+
+    @media only screen and (min-width: 768px){
+        margin: 20% 0 0 3rem;
+        overflow-y: auto;
+    }
+}

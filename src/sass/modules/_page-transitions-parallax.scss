@@ -1,0 +1,45 @@
+/* ---------------------------------------------------------
+ 2. Loader Component
+-------------------------------------------------------- */
+#page-slider {
+
+    .section .fp-bg,
+    .slide .fp-bg {
+        background-size: cover;
+        background-position: center 80%;
+    }
+
+    .section { position: relative; }
+}
+
+[data-anchor="home-page"] {
+
+    .slide-1 .fp-bg {
+        background-image: url("../img/desktop/background/bg_home.jpg");
+    }
+
+    .slide-2 .fp-bg {
+        background-image: url("../img/desktop/background/bg_history.jpg");
+    }
+
+}
+
+[data-anchor="about-us-page"] .fp-bg {
+    background-image: url("../img/desktop/background/bg_about_us.jpg");
+}
+
+[data-anchor="group-page"] .fp-bg {
+    background-image: url("../img/desktop/background/bg_group.jpg");
+}
+
+[data-anchor="services-page"] .fp-bg {
+    background-image: url("../img/desktop/background/bg_services.jpg");
+}
+
+[data-anchor="team-page"] .fp-bg {
+    background-image: url("../img/desktop/background/bg_team_new.jpg");
+}
+
+[data-anchor="contact-page"] .fp-bg {
+    background-image: url("../img/desktop/background/bg_contact_us.jpg");
+}

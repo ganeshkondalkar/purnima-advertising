@@ -1,0 +1,21 @@
+{
+    "scripts": {
+        "lib": [
+            "<%= NODE_MODULES %>/jquery/dist/jquery.js",
+            "<%= NODE_MODULES %>/popper.js/dist/umd/popper.js",
+            "<%= NODE_MODULES %>/bootstrap/dist/js/bootstrap.js",
+            "<%= NODE_MODULES %>/Slidebars/dist/slidebars.js",
+            "<%= NODE_MODULES %>/owl.carousel/dist/owl.carousel.js",
+            "<%= NODE_MODULES %>/jquery-cycle-2/src/jquery.cycle.all.js",
+            "<%= NODE_MODULES %>/jquery-cycle-2/src/jquery.cycle2.swipe.js",
+            "<%= NODE_MODULES %>/jquery-cycle-2/src/jquery.cycle2.center.js",
+            "<%= NODE_MODULES %>/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.js"
+        ]
+    },
+    "styles": {
+        "lib": []
+    },
+    "fonts": {
+        "fontawesome": "<%= NODE_MODULES %>/@fortawesome/fontawesome-free/webfonts/*"
+    }
+}

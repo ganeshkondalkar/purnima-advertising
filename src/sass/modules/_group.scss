@@ -1,0 +1,23 @@
+[data-anchor="group-page"] {
+
+    & > .tab-pane-logo {
+        display: none;
+
+        @media only screen and (max-width: 767.98px) {
+            width: 50%;
+            margin: 10% 0 10% 15%;
+            display: inline;
+        }
+
+    }
+
+    .tab-pane > .tab-pane-logo {
+        display: inline;
+
+        @media only screen and (max-width: 767.98px) {
+            display: none;
+        }
+
+    }
+
+}

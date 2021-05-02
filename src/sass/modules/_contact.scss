@@ -1,0 +1,121 @@
+$lightBorderClr: #b4b5b7;
+$darkBorderClr: #000;
+
+[data-anchor="contact-page"] {
+    /* height: auto !important; */
+
+    @media only screen and (max-width: 767.98px) {
+
+        .collapse-component {
+            margin-left: 20px;
+        }
+    }
+
+    h1 {
+        @extend %mont-serrate-bold;
+        @include font-sizer(24);
+        @extend %clr-white;
+    }
+
+    h3 {
+        @extend %mont-serrate-medium-bold;
+        @include font-sizer(12.48);
+        letter-spacing: 2.5px;
+        color: #c5c7c9;
+    }
+}
+
+.contact-us-component {
+    @media only screen and (min-width: 768px) {
+        margin-top: 4rem;
+    }
+
+    @media only screen and (max-width: 767.98px) {
+        margin-bottom: 20px;
+        padding-bottom: 50px;
+        background: url("../img/mobile/background/bg_common.png") no-repeat 3rem bottom #fff;
+        background-size: contain;
+
+        h1 {
+            background-color: $tabsHeaderBGClr;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        h3 {
+            display: none;
+        }
+    }
+
+    @media only screen and (min-width: 1367px) {
+        margin-top: 13rem;
+    }
+
+    .contact-header {
+        background-color: $tabsHeaderBGClr;
+    }
+
+    .contact-header-link {
+        @extend %mont-serrate-medium-bold;
+        @include font-sizer(9.65);
+        letter-spacing: 1px;
+        color: #fff;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
+    // carot-icon
+    i {
+        float: right;
+        font-size: 2rem;
+        line-height: 1rem;
+
+        @media only screen and (min-width: 1367px) {
+            font-size: 2.5rem;
+            line-height: 1.5rem;
+        }
+    }
+}
+
+#contact-form-container {
+    background-color: #fff;
+
+    .border-bottom {
+        border-bottom: 1px solid $lightBorderClr;
+    }
+
+    .border-left {
+        border-left: 1px solid $lightBorderClr;
+    }
+
+    textarea {
+        height: 90px;
+    }
+
+    .form-control {
+        @extend %mont-serrate-medium-bold;
+        @include font-sizer(9.65);
+        letter-spacing: 1px;
+        border: none;
+        border-radius: 0;
+    }
+
+    .form-control,
+    .btn {
+        color: #929497;
+        border-radius: 0;
+    }
+
+    .error {
+        display: none;
+        color: #FF0000;
+        font-size: .6rem;
+    }
+
+    .form-status {
+        margin-right: 10px;
+        color: #929497;
+    }
+}

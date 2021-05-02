@@ -1,0 +1,139 @@
+.navbar {
+    i {
+        background-image: url("../img/nav/nav-icons-sprite.png");
+        background-repeat: no-repeat;
+        width: 24px;
+        height: 40px; line-height: 40px;
+        display: inline-block;
+    }
+}
+
+.social-media-nav {
+
+    i {
+
+        &.icon-twitter {
+            background-position: -54px -49px;
+
+            // show white icons from sprite
+            .main-nav-open &,
+            .home-page.slide-1 &,
+            .home-page.slide-2 &,
+            .about-us-page &,
+            .contact-page & {
+                background-position: -54px -3px;
+            }
+        }
+
+        &.icon-facebook-f {
+            background-position: -78px -49px;
+
+            // show white icons from sprite
+            .main-nav-open &,
+            .home-page.slide-1 &,
+            .home-page.slide-2 &,
+            .about-us-page &,
+            .contact-page & {
+                background-position: -78px -3px;
+            }
+        }
+
+        &.icon-linkedin-in {
+            background-position: -104px -49px;
+
+            // show white icons from sprite
+            .main-nav-open &,
+            .home-page.slide-1 &,
+            .home-page.slide-2 &,
+            .about-us-page &,
+            .contact-page & {
+                background-position: -104px -3px;
+            }
+        }
+    }
+}
+
+.navbar {
+    .active-page {
+        @extend %base-text-clr;
+        @extend %mont-serrate-medium-bold;
+
+        // show white icons from sprite
+        .home-page &,
+        .about-us-page &,
+        .contact-page & {
+            @extend %clr-white;
+        }
+    }
+
+    .nav {
+        .navbar-brand,
+        .nav-link,
+        .navbar-text {
+            padding-top: 0; padding-bottom: 0;
+            height: 40px; line-height: 40px;
+            display: inline-block;
+        }
+
+        @media only screen and (max-width: 767.98px){
+            .navbar-text {
+                font-size: 10px;
+            }
+        }
+    }
+
+    i {
+
+        &.icon-divider {
+            width: 9px;
+            background-position: -40px -49px;
+
+            // show white icons from sprite
+            .main-nav-open &,
+            .home-page.slide-1 &,
+            .home-page.slide-2 &,
+            .about-us-page &,
+            .contact-page & {
+                background-position: -40px -3px;
+            }
+        }
+
+        &.icon-menu-stripes {
+            background-position: 0 -49px;
+
+            // show white icons from sprite
+            .main-nav-open &,
+            .home-page.slide-1 &,
+            .home-page.slide-2 &,
+            .about-us-page &,
+            .contact-page & {
+                background-position: 0 -3px;
+            }
+        }
+    }
+
+}
+
+.main-navbar {
+    background-color: rgba(0, 0, 0, 0.7);
+
+    // Large devices (desktops, 992px and up)
+    width: 25%;
+
+    // Medium devices (tablets, 768px and below)
+    @media only screen and (min-width: 576px) and (max-width: 767.98px) {
+        width: 40%;
+    }
+
+    // Extra small devices (portrait phones, less than 576px)
+    @media (max-width: 575.98px) {
+        width: 100%;
+    }
+
+    .nav-link {
+        @extend %mont-serrate-medium-bold;
+        @extend %clr-white;
+        @include font-sizer(12);
+    }
+
+}

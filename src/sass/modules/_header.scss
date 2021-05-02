@@ -1,0 +1,88 @@
+/*---------------------------------------------------------
+ 1. Reset & Globals
+-------------------------------------------------------- */
+html, body {
+    /* Opera bug fix: without this opera was not able to perform scroll */
+    overflow: initial;
+}
+
+body {
+	@extend %mont-serrate;
+	font-size: 12px;
+	@extend %base-text-clr;
+    font-weight: normal;
+	/*
+		MAC Font Flikering issue
+		Thanks to:
+		http://stackoverflow.com/questions/21278020/font-weight-turns-lighter-on-mac-safari
+	*/
+	-webkit-font-smoothing: subpixel-antialiased;
+	font-smoothing: subpixel-antialiased;
+	/*background-color: #081123;*/
+}
+
+/* %badge-background {
+    background: url("../img/bg-badge.png") no-repeat top center;
+    background-size: 100% auto;
+} */
+
+/* ---------------------------------------------------------
+ 2. Loader Component
+-------------------------------------------------------- */
+#loader {
+	height: 200px;
+	text-align: center;
+	white-space: nowrap;
+
+	&:before {
+		content: "";
+		display: inline-block;
+		height: 100%;
+		vertical-align: middle;
+	}
+
+	.inner {
+		display: inline-block;
+		vertical-align: middle;
+		width: auto;
+		margin: 0 auto;
+	}
+}
+
+/* ---------------------------------------------------------
+ 3. Header Component
+-------------------------------------------------------- */
+header {
+    @media only screen and (max-width: 767.98px) {
+        &.container-fluid { padding-right: 0; }
+    }
+
+    &.position-fixed {
+        z-index: 10000;
+    }
+
+    &.first-slide {
+        .navbar-toggler * {
+            @extend %clr-white;
+        }
+    }
+
+    @media only screen and (max-width: 767.98px) {
+        > .pt-4 {
+            padding-top: 0.5rem !important;
+        }
+    }
+}
+
+#logo {
+    width: 17.45%;
+    @media only screen and (max-width: 767.98px) {
+        width: 50%;
+        margin-right: -3rem;
+    }
+
+    img {
+        @extend %img;
+        vertical-align: baseline;
+    }
+}

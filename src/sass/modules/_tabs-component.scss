@@ -1,0 +1,144 @@
+$tabsHeaderBGClr: #ce9246;
+
+.tabs-component {
+    @extend %mont-serrate;
+    @extend %clr-white;
+    display: inline-block;
+
+    // Large devices (desktops, 992px and up)
+    @media only screen and (min-width: 768px) {
+        margin-top: 10%;
+    }
+
+    .tabs-header-bar,
+    .tabs-content-bar {
+        padding: 1.5% 0 1.5% 8.75%;
+
+        @media only screen and (min-width: 768px) and (max-width: 991.98px){
+            padding-left: 1rem;
+        }
+    }
+
+    .tabs-header-bar {
+        background-color: $tabsHeaderBGClr;
+        width: 52%;
+
+        /* Extra Small (Portrait), Small (Landscape), Tablet */
+        @media only screen and (max-width: 767.98px) {
+            width: 100%;
+            padding: 1rem;
+        }
+
+    }
+
+    .tabs-content-bar {
+        padding-top: 3.5rem;
+        width: 52%;
+
+        @media only screen and (max-width: 767.98px) {
+            width: 100%;
+            overflow: hidden;
+            margin-bottom: 20px;
+            padding: 1rem 1rem 50px;
+            background: url("../img/mobile/background/bg_common.png") no-repeat 3rem bottom #fff;
+            background-size: contain;
+
+            .scroling-content,
+            #group-page-tabsContent .col-md-5,
+            #services-page-tabsContent .col-md-8 { padding: 0; }
+
+        }
+
+        * {
+            @extend %base-text-clr;
+            @extend %mont-serrate-medium-bold;
+            @include font-sizer(9);
+        }
+
+        b, h6 {
+            @extend %mont-serrate-semi-bold;
+        }
+
+        .mCSB_inside > .mCSB_container {
+            margin-right: 50px;
+        }
+    }
+
+    .nav-item {
+        background: url("../img/desktop/img-tabs-link-border.png") no-repeat right center;
+        padding: 0 2.5rem;
+
+        // Mobile,Tablet devices (320px and below)
+        @media only screen and (max-width: 575.98px) {
+            padding: 0 .7rem;
+        }
+
+        // Mobile,Tablet devices (767.98px and below)
+        @media only screen and (min-width: 350px) and (max-width: 767.98px) {
+            padding: 0 1.2rem;
+        }
+
+        @media only screen and (min-width: 768px) and (max-width: 991.98px){
+            padding: 0 1.5rem;
+        }
+
+        &:first-child {
+            padding-left: 0;
+        }
+
+        &:last-child {
+            background: none;
+            padding-right: 0;
+        }
+    }
+
+    .nav-link,
+    .gallery-nav-link {
+        @include font-sizer(9.6);
+        @extend %mont-serrate-semi-bold;
+        color: inherit;
+        padding: 0 0 5px 0;
+
+        // Mobile,Tablet devices (320pxpx and below)
+        @media only screen and (max-width: 349.98px) {
+            @include font-sizer(8.6);
+        }
+
+        &.active {
+            border-bottom: 5px solid;
+        }
+    }
+
+    @media only screen and (min-width: 768px){
+        .scroling-content {
+            max-height: 300px;
+        }
+    }
+
+    &.right {
+
+        .tabs-header-bar {
+            float: right;
+            padding-left: 5%;
+            /* Extra Small (Portrait), Small (Landscape), Tablet */
+            @media only screen and (max-width: 767.98px) {
+                padding: 1rem;
+            }
+        }
+
+        // Large devices (desktops, 992px and up)
+        @media only screen and (min-width: 992px) {
+            .tabs-content-bar {
+                width: 100%;
+                padding-left: 7.5%;
+            }
+        }
+
+        .tab-pane-logo {
+            position: absolute;
+            bottom: 41px;
+            right: 17.03%;
+            width: 17.03%;
+        }
+    }
+}

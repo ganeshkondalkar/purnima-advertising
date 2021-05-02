@@ -1,0 +1,1286 @@
+/*
+
+    // Extra small devices (portrait phones, less than 576px)
+    // No media query for `xs` since this is the default in Bootstrap
+
+    // Small devices (landscape phones, 576px and up)
+    @media only screen and (min-width: 576px) { ... }
+
+    // Medium devices (tablets, 768px and up)
+    @media only screen and (min-width: 768px) { ... }
+
+    // Large devices (desktops, 992px and up)
+    @media only screen and (min-width: 992px) { ... }
+
+    // Extra large devices (large desktops, 1200px and up)
+    @media only screen and (min-width: 1200px) { ... }
+
+    // Extra small devices (portrait phones, less than 576px)
+    @media (max-width: 575.98px) { ... }
+
+    // Small devices (landscape phones, 576px and up)
+    @media (min-width: 576px) and (max-width: 767.98px) { ... }
+
+    // Medium devices (tablets, 768px and up)
+    @media (min-width: 768px) and (max-width: 991.98px) { ... }
+
+    // Large devices (desktops, 992px and up)
+    @media (min-width: 992px) and (max-width: 1199.98px) { ... }
+
+    // Extra large devices (large desktops, 1200px and up)
+    @media (min-width: 1200px) { ... }
+
+*/
+/* line 3, src/sass/modules/_site-variables.scss */
+.navbar .active-page, .main-navbar .nav-link, .tabs-component .tabs-content-bar *, [data-anchor="contact-page"] h3, .contact-us-component .contact-header-link, #contact-form-container .form-control, footer, .tabs-component .tabs-content-bar b, .tabs-component .tabs-content-bar h6, .tabs-component .nav-link,
+.tabs-component .gallery-nav-link, [data-anchor="team-page"] .card-title, [data-anchor="contact-page"] h1, body, .tabs-component, [data-anchor="team-page"] .card-body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* line 7, src/sass/modules/_site-variables.scss */
+header.first-slide .navbar-toggler *, .home-page .navbar .active-page,
+.about-us-page .navbar .active-page,
+.contact-page .navbar .active-page, .main-navbar .nav-link, .tabs-component, [data-anchor="contact-page"] h1 {
+  color: #fff;
+}
+
+/* line 11, src/sass/modules/_site-variables.scss */
+[data-anchor="contact-page"] h1 {
+  font-weight: 700;
+}
+
+/* line 15, src/sass/modules/_site-variables.scss */
+body, .navbar .active-page, .tabs-component .tabs-content-bar *, [data-anchor="team-page"] .card-body {
+  color: #404041;
+}
+
+/* line 24, src/sass/modules/_site-variables.scss */
+.navbar .active-page, .main-navbar .nav-link, .tabs-component .tabs-content-bar *, [data-anchor="contact-page"] h3, .contact-us-component .contact-header-link, #contact-form-container .form-control, footer {
+  font-weight: 500;
+}
+
+/* line 29, src/sass/modules/_site-variables.scss */
+.tabs-component .tabs-content-bar b, .tabs-component .tabs-content-bar h6, .tabs-component .nav-link,
+.tabs-component .gallery-nav-link, [data-anchor="team-page"] .card-title {
+  font-weight: 600;
+}
+
+/* line 44, src/sass/modules/_site-variables.scss */
+#logo img, [data-anchor="clients-page"] .tabs-component.right img, [data-anchor="gallery-page"] img {
+  border: 0;
+  height: auto;
+  width: 100%;
+}
+
+/*
+    Font pt to px to rem
+    12pt = 16px = 1rem
+    (($pt * 16px) / 12pt) / 16px = ??rem
+*/
+/*---------------------------------------------------------
+ 1. Reset & Globals
+-------------------------------------------------------- */
+/* line 4, src/sass/modules/_header.scss */
+html, body {
+  /* Opera bug fix: without this opera was not able to perform scroll */
+  overflow: initial;
+}
+
+/* line 9, src/sass/modules/_header.scss */
+body {
+  font-size: 12px;
+  font-weight: normal;
+  /*
+		MAC Font Flikering issue
+		Thanks to:
+		http://stackoverflow.com/questions/21278020/font-weight-turns-lighter-on-mac-safari
+	*/
+  -webkit-font-smoothing: subpixel-antialiased;
+  font-smoothing: subpixel-antialiased;
+  /*background-color: #081123;*/
+}
+
+/* %badge-background {
+    background: url("../img/bg-badge.png") no-repeat top center;
+    background-size: 100% auto;
+} */
+/* ---------------------------------------------------------
+ 2. Loader Component
+-------------------------------------------------------- */
+/* line 32, src/sass/modules/_header.scss */
+#loader {
+  height: 200px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* line 37, src/sass/modules/_header.scss */
+#loader:before {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+
+/* line 44, src/sass/modules/_header.scss */
+#loader .inner {
+  display: inline-block;
+  vertical-align: middle;
+  width: auto;
+  margin: 0 auto;
+}
+
+/* ---------------------------------------------------------
+ 3. Header Component
+-------------------------------------------------------- */
+@media only screen and (max-width: 767.98px) {
+  /* line 57, src/sass/modules/_header.scss */
+  header.container-fluid {
+    padding-right: 0;
+  }
+}
+
+/* line 60, src/sass/modules/_header.scss */
+header.position-fixed {
+  z-index: 10000;
+}
+
+@media only screen and (max-width: 767.98px) {
+  /* line 71, src/sass/modules/_header.scss */
+  header > .pt-4 {
+    padding-top: 0.5rem !important;
+  }
+}
+
+/* line 77, src/sass/modules/_header.scss */
+#logo {
+  width: 17.45%;
+}
+
+@media only screen and (max-width: 767.98px) {
+  /* line 77, src/sass/modules/_header.scss */
+  #logo {
+    width: 50%;
+    margin-right: -3rem;
+  }
+}
+
+/* line 84, src/sass/modules/_header.scss */
+#logo img {
+  vertical-align: baseline;
+}
+
+/* line 2, src/sass/modules/_nav.scss */
+.navbar i {
+  background-image: url("../img/nav/nav-icons-sprite.png");
+  background-repeat: no-repeat;
+  width: 24px;
+  height: 40px;
+  line-height: 40px;
+  display: inline-block;
+}
+
+/* line 15, src/sass/modules/_nav.scss */
+.social-media-nav i.icon-twitter {
+  background-position: -54px -49px;
+}
+
+/* line 19, src/sass/modules/_nav.scss */
+.main-nav-open .social-media-nav i.icon-twitter,
+.home-page.slide-1 .social-media-nav i.icon-twitter,
+.home-page.slide-2 .social-media-nav i.icon-twitter,
+.about-us-page .social-media-nav i.icon-twitter,
+.contact-page .social-media-nav i.icon-twitter {
+  background-position: -54px -3px;
+}
+
+/* line 28, src/sass/modules/_nav.scss */
+.social-media-nav i.icon-facebook-f {
+  background-position: -78px -49px;
+}
+
+/* line 32, src/sass/modules/_nav.scss */
+.main-nav-open .social-media-nav i.icon-facebook-f,
+.home-page.slide-1 .social-media-nav i.icon-facebook-f,
+.home-page.slide-2 .social-media-nav i.icon-facebook-f,
+.about-us-page .social-media-nav i.icon-facebook-f,
+.contact-page .social-media-nav i.icon-facebook-f {
+  background-position: -78px -3px;
+}
+
+/* line 41, src/sass/modules/_nav.scss */
+.social-media-nav i.icon-linkedin-in {
+  background-position: -104px -49px;
+}
+
+/* line 45, src/sass/modules/_nav.scss */
+.main-nav-open .social-media-nav i.icon-linkedin-in,
+.home-page.slide-1 .social-media-nav i.icon-linkedin-in,
+.home-page.slide-2 .social-media-nav i.icon-linkedin-in,
+.about-us-page .social-media-nav i.icon-linkedin-in,
+.contact-page .social-media-nav i.icon-linkedin-in {
+  background-position: -104px -3px;
+}
+
+/* line 70, src/sass/modules/_nav.scss */
+.navbar .nav .navbar-brand,
+.navbar .nav .nav-link,
+.navbar .nav .navbar-text {
+  padding-top: 0;
+  padding-bottom: 0;
+  height: 40px;
+  line-height: 40px;
+  display: inline-block;
+}
+
+@media only screen and (max-width: 767.98px) {
+  /* line 79, src/sass/modules/_nav.scss */
+  .navbar .nav .navbar-text {
+    font-size: 10px;
+  }
+}
+
+/* line 87, src/sass/modules/_nav.scss */
+.navbar i.icon-divider {
+  width: 9px;
+  background-position: -40px -49px;
+}
+
+/* line 92, src/sass/modules/_nav.scss */
+.main-nav-open .navbar i.icon-divider,
+.home-page.slide-1 .navbar i.icon-divider,
+.home-page.slide-2 .navbar i.icon-divider,
+.about-us-page .navbar i.icon-divider,
+.contact-page .navbar i.icon-divider {
+  background-position: -40px -3px;
+}
+
+/* line 101, src/sass/modules/_nav.scss */
+.navbar i.icon-menu-stripes {
+  background-position: 0 -49px;
+}
+
+/* line 105, src/sass/modules/_nav.scss */
+.main-nav-open .navbar i.icon-menu-stripes,
+.home-page.slide-1 .navbar i.icon-menu-stripes,
+.home-page.slide-2 .navbar i.icon-menu-stripes,
+.about-us-page .navbar i.icon-menu-stripes,
+.contact-page .navbar i.icon-menu-stripes {
+  background-position: 0 -3px;
+}
+
+/* line 117, src/sass/modules/_nav.scss */
+.main-navbar {
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 25%;
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767.98px) {
+  /* line 117, src/sass/modules/_nav.scss */
+  .main-navbar {
+    width: 40%;
+  }
+}
+
+@media (max-width: 575.98px) {
+  /* line 117, src/sass/modules/_nav.scss */
+  .main-navbar {
+    width: 100%;
+  }
+}
+
+/* line 133, src/sass/modules/_nav.scss */
+.main-navbar .nav-link {
+  font-size: 1rem;
+}
+
+@media only screen and (min-width: 1367px) {
+  /* line 133, src/sass/modules/_nav.scss */
+  .main-navbar .nav-link {
+    font-size: 1.4rem;
+  }
+}
+
+/* ---------------------------------------------------------
+ 2. Parallax
+-------------------------------------------------------- */
+/* line 4, src/sass/modules/_page-transitions.scss */
+[canvas=container] {
+  overflow: inherit;
+}
+
+/* line 8, src/sass/modules/_page-transitions.scss */
+#page-slider {
+  height: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+  /* line 11, src/sass/modules/_page-transitions.scss */
+  #page-slider .section,
+  #page-slider .slide {
+    background-size: cover;
+    background-position: center 0;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    overflow: hidden;
+  }
+}
+
+/* line 22, src/sass/modules/_page-transitions.scss */
+#page-slider .section {
+  height: auto;
+  position: relative;
+  box-shadow: 0 -5px 9px 0 rgba(0, 0, 0, 0.2);
+}
+
+@media only screen and (min-width: 768px) {
+  /* line 22, src/sass/modules/_page-transitions.scss */
+  #page-slider .section {
+    height: 100%;
+  }
+}
+
+/* line 36, src/sass/modules/_page-transitions.scss */
+[data-anchor="home-page"] .slide-1 {
+  background-image: url("../img/landing-page/desktop/bg_intro.jpg");
+}
+
+/* line 40, src/sass/modules/_page-transitions.scss */
+[data-anchor="home-page"] .slide-2 {
+  background-image: url("../img/landing-page/desktop/bg_pricing.jpg");
+}
+
+/* line 44, src/sass/modules/_page-transitions.scss */
+[data-anchor="home-page"] .slide-3 {
+  background-image: url("../img/landing-page/desktop/bg_history.jpg");
+}
+
+/* line 50, src/sass/modules/_page-transitions.scss */
+[data-anchor="about-us-page"] {
+  background-image: url("../img/desktop/background/bg_about_us.jpg");
+}
+
+/* line 54, src/sass/modules/_page-transitions.scss */
+[data-anchor="group-page"] {
+  background-image: url("../img/desktop/background/bg_group.jpg");
+}
+
+@media only screen and (max-width: 767.98px) {
+  /* line 54, src/sass/modules/_page-transitions.scss */
+  [data-anchor="group-page"] {
+    padding-top: 7rem;
+  }
+}
+
+/* line 62, src/sass/modules/_page-transitions.scss */
+[data-anchor="services-page"] {
+  background-image: url("../img/desktop/background/bg_services.jpg");
+}
+
+@media only screen and (max-width: 767.98px) {
+  /* line 66, src/sass/modules/_page-transitions.scss */
+  [data-anchor="clients-page"],
+  [data-anchor="gallery-page"] {
+    padding-top: 4rem;
+  }
+}
+
+/* line 73, src/sass/modules/_page-transitions.scss */
+[data-anchor="team-page"] {
+  background-image: url("../img/desktop/background/bg_team_new.jpg");
+}
+
+/* line 77, src/sass/modules/_page-transitions.scss */
+[data-anchor="contact-page"] {
+  background-image: url("../img/desktop/background/bg_contact_us.jpg");
+}
+
+/* Extra Small (Portrait), Small (Landscape), Tablet */
+@media only screen and (max-width: 767.98px) {
+  /* line 82, src/sass/modules/_page-transitions.scss */
+  [data-anchor="about-us-page"],
+  [data-anchor="group-page"],
+  [data-anchor="services-page"],
+  [data-anchor="clients-page"],
+  [data-anchor="gallery-page"],
+  [data-anchor="team-page"],
+  [data-anchor="contact-page"] {
+    background: none;
+  }
+}
+
+/* line 1, src/sass/modules/_home-slider.scss */
+#home-page-slider {
+  /* THIS STYLING IS ONLY TO SHOW THE BOX SHADOW BELOW THE HOME SLIDER. */
+}
+
+/* line 3, src/sass/modules/_home-slider.scss */
+#home-page-slider .owl-nav {
+  display: block;
+  position: absolute;
+  bottom: -10px;
+  background: none;
+  width: 100%;
+  box-shadow: 0 -5px 9px 0 rgba(0, 0, 0, 0.2);
+  margin: 0;
+  height: 10px;
+}
+
+/* line 13, src/sass/modules/_home-slider.scss */
+#home-page-slider .owl-nav button {
+  display: none;
+}
+
+/* line 18, src/sass/modules/_home-slider.scss */
+#home-page-slider .owl-dots {
+  position: absolute;
+  bottom: 50px;
+  right: 13.15%;
+}
+
+/* line 23, src/sass/modules/_home-slider.scss */
+#home-page-slider .owl-dots span {
+  background: #ce9246;
+  margin: 5px 10px;
+  width: 8px;
+  height: 8px;
+}
+
+/* line 30, src/sass/modules/_home-slider.scss */
+#home-page-slider .owl-dots .active span {
+  background: #b9e2e2;
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.4);
+}
+
+/* line 3, src/sass/modules/_tabs-component.scss */
+.tabs-component {
+  display: inline-block;
+}
+
+@media only screen and (min-width: 768px) {
+  /* line 3, src/sass/modules/_tabs-component.scss */
+  .tabs-component {
+    margin-top: 10%;
+  }
+}
+
+/* line 13, src/sass/modules/_tabs-component.scss */
+.tabs-component .tabs-header-bar,
+.tabs-component .tabs-content-bar {
+  padding: 1.5% 0 1.5% 8.75%;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
+  /* line 13, src/sass/modules/_tabs-component.scss */
+  .tabs-component .tabs-header-bar,
+  .tabs-component .tabs-content-bar {
+    padding-left: 1rem;
+  }
+}
+
+/* line 22, src/sass/modules/_tabs-component.scss */
+.tabs-component .tabs-header-bar {
+  background-color: #ce9246;
+  width: 52%;
+  /* Extra Small (Portrait), Small (Landscape), Tablet */
+}
+
+@media only screen and (max-width: 767.98px) {
+  /* line 22, src/sass/modules/_tabs-component.scss */
+  .tabs-component .tabs-header-bar {
+    width: 100%;
+    padding: 1rem;
+  }
+}
+
+/* line 34, src/sass/modules/_tabs-component.scss */
+.tabs-component .tabs-content-bar {
+  padding-top: 3.5rem;
+  width: 52%;
+}
+
+@media only screen and (max-width: 767.98px) {
+  /* line 34, src/sass/modules/_tabs-component.scss */
+  .tabs-component .tabs-content-bar {
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 20px;
+    padding: 1rem 1rem 50px;
+    background: url("../img/mobile/background/bg_common.png") no-repeat 3rem bottom #fff;
+    background-size: contain;
+  }
+  /* line 46, src/sass/modules/_tabs-component.scss */
+  .tabs-component .tabs-content-bar .scroling-content,
+  .tabs-component .tabs-content-bar #group-page-tabsContent .col-md-5,
+  .tabs-component .tabs-content-bar #services-page-tabsContent .col-md-8 {
+    padding: 0;
+  }
+}
+
+/* line 52, src/sass/modules/_tabs-component.scss */
+.tabs-component .tabs-content-bar * {
+  font-size: 0.75rem;
+}
+
+@media only screen and (min-width: 1367px) {
+  /* line 52, src/sass/modules/_tabs-component.scss */
+  .tabs-component .tabs-content-bar * {
+    font-size: 1.05rem;
+  }
+}
+
+/* line 62, src/sass/modules/_tabs-component.scss */
+.tabs-component .tabs-content-bar .mCSB_inside > .mCSB_container {
+  margin-right: 50px;
+}
+
+/* line 67, src/sass/modules/_tabs-component.scss */
+.tabs-component .nav-item {
+  background: url("../img/desktop/img-tabs-link-border.png") no-repeat right center;
+  padding: 0 2.5rem;
+}
+
+@media only screen and (max-width: 575.98px) {
+  /* line 67, src/sass/modules/_tabs-component.scss */
+  .tabs-component .nav-item {
+    padding: 0 .7rem;
+  }
+}
+
+@media only screen and (min-width: 350px) and (max-width: 767.98px) {
+  /* line 67, src/sass/modules/_tabs-component.scss */
+  .tabs-component .nav-item {
+    padding: 0 1.2rem;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
+  /* line 67, src/sass/modules/_tabs-component.scss */
+  .tabs-component .nav-item {
+    padding: 0 1.5rem;
+  }
+}
+
+/* line 85, src/sass/modules/_tabs-component.scss */
+.tabs-component .nav-item:first-child {
+  padding-left: 0;
+}
+
+/* line 89, src/sass/modules/_tabs-component.scss */
+.tabs-component .nav-item:last-child {
+  background: none;
+  padding-right: 0;
+}
+
+/* line 95, src/sass/modules/_tabs-component.scss */
+.tabs-component .nav-link,
+.tabs-component .gallery-nav-link {
+  font-size: 0.8rem;
+  color: inherit;
+  padding: 0 0 5px 0;
+}
+
+@media only screen and (min-width: 1367px) {
+  /* line 95, src/sass/modules/_tabs-component.scss */
+  .tabs-component .nav-link,
+  .tabs-component .gallery-nav-link {
+    font-size: 1.12rem;
+  }
+}
+
+@media only screen and (max-width: 349.98px) {
+  /* line 95, src/sass/modules/_tabs-component.scss */
+  .tabs-component .nav-link,
+  .tabs-component .gallery-nav-link {
+    font-size: 0.7166666667rem;
+  }
+}
+
+@media only screen and (max-width: 349.98px) and (min-width: 1367px) {
+  /* line 95, src/sass/modules/_tabs-component.scss */
+  .tabs-component .nav-link,
+  .tabs-component .gallery-nav-link {
+    font-size: 1.0033333333rem;
+  }
+}
+
+/* line 107, src/sass/modules/_tabs-component.scss */
+.tabs-component .nav-link.active,
+.tabs-component .gallery-nav-link.active {
+  border-bottom: 5px solid;
+}
+
+@media only screen and (min-width: 768px) {
+  /* line 113, src/sass/modules/_tabs-component.scss */
+  .tabs-component .scroling-content {
+    max-height: 300px;
+  }
+}
+
+/* line 120, src/sass/modules/_tabs-component.scss */
+.tabs-component.right .tabs-header-bar {
+  float: right;
+  padding-left: 5%;
+  /* Extra Small (Portrait), Small (Landscape), Tablet */
+}
+
+@media only screen and (max-width: 767.98px) {
+  /* line 120, src/sass/modules/_tabs-component.scss */
+  .tabs-component.right .tabs-header-bar {
+    padding: 1rem;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  /* line 131, src/sass/modules/_tabs-component.scss */
+  .tabs-component.right .tabs-content-bar {
+    width: 100%;
+    padding-left: 7.5%;
+  }
+}
+
+/* line 137, src/sass/modules/_tabs-component.scss */
+.tabs-component.right .tab-pane-logo {
+  position: absolute;
+  bottom: 41px;
+  right: 17.03%;
+  width: 17.03%;
+}
+
+/* line 1, src/sass/modules/_custom-scroller.scss */
+.mCSB_inside > .mCSB_container {
+  margin-right: 10px;
+}
+
+/* line 5, src/sass/modules/_custom-scroller.scss */
+.mCS-dark.mCSB_scrollTools .mCSB_draggerRail {
+  background-color: #404041;
+}
+
+/* line 9, src/sass/modules/_custom-scroller.scss */
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+  width: 6px;
+}
+
+@media only screen and (min-width: 768px) {
+  /* line 2, src/sass/modules/_team.scss */
+  [data-anchor="team-page"] img {
+    width: 90%;
+  }
+}
+
+/* line 8, src/sass/modules/_team.scss */
+[data-anchor="team-page"] img.we-logo {
+  right: 17%;
+  top: 28%;
+}
+
+@media only screen and (max-width: 767.98px) {
+  /* line 8, src/sass/modules/_team.scss */
+  [data-anchor="team-page"] img.we-logo {
+    display: none;
+  }
+}
+
+/* line 18, src/sass/modules/_team.scss */
+[data-anchor="team-page"] .card {
+  border-radius: none;
+  border: none;
+  background-color: transparent;
+}
+
+/* line 24, src/sass/modules/_team.scss */
+[data-anchor="team-page"] .card-body {
+  padding: .5rem 0 1.5rem;
+  text-align: center;
+  width: 90%;
+}
+
+/* line 32, src/sass/modules/_team.scss */
+[data-anchor="team-page"] .card-title {
+  font-size: 0.72rem;
+  margin-bottom: .5rem;
+  color: inherit;
+}
+
+@media only screen and (min-width: 1367px) {
+  /* line 32, src/sass/modules/_team.scss */
+  [data-anchor="team-page"] .card-title {
+    font-size: 1.008rem;
+  }
+}
+
+/* line 39, src/sass/modules/_team.scss */
+[data-anchor="team-page"] .card-subtitle {
+  font-size: 0.52rem;
+}
+
+@media only screen and (min-width: 1367px) {
+  /* line 39, src/sass/modules/_team.scss */
+  [data-anchor="team-page"] .card-subtitle {
+    font-size: 0.728rem;
+  }
+}
+
+@media only screen and (max-width: 767.98px) {
+  /* line 43, src/sass/modules/_team.scss */
+  [data-anchor="team-page"] .scroller-container {
+    margin-bottom: 20px;
+    padding-bottom: 50px;
+    background: url("../img/mobile/background/bg_common.png") no-repeat 3rem bottom #fff;
+    background-size: contain;
+  }
+}
+
+/* line 54, src/sass/modules/_team.scss */
+#team-scroller-component {
+  margin: 10% 0 0;
+}
+
+@media only screen and (min-width: 768px) {
+  /* line 54, src/sass/modules/_team.scss */
+  #team-scroller-component {
+    margin: 20% 0 0 3rem;
+    overflow-y: auto;
+  }
+}
+
+@media only screen and (max-width: 767.98px) {
+  /* line 3, src/sass/modules/_about-us.scss */
+  #about-us-page-third-pane .col-md-4 {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  /* line 10, src/sass/modules/_about-us.scss */
+  #about-us-page-tabsContent * {
+    color: #dcddde;
+  }
+}
+
+/* line 3, src/sass/modules/_group.scss */
+[data-anchor="group-page"] > .tab-pane-logo {
+  display: none;
+}
+
+@media only screen and (max-width: 767.98px) {
+  /* line 3, src/sass/modules/_group.scss */
+  [data-anchor="group-page"] > .tab-pane-logo {
+    width: 50%;
+    margin: 10% 0 10% 15%;
+    display: inline;
+  }
+}
+
+/* line 14, src/sass/modules/_group.scss */
+[data-anchor="group-page"] .tab-pane > .tab-pane-logo {
+  display: inline;
+}
+
+@media only screen and (max-width: 767.98px) {
+  /* line 14, src/sass/modules/_group.scss */
+  [data-anchor="group-page"] .tab-pane > .tab-pane-logo {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  /* line 3, src/sass/modules/_clients.scss */
+  [data-anchor="clients-page"] .col-md-1 {
+    flex: 0 0 10%;
+    max-width: 10%;
+  }
+}
+
+/* line 14, src/sass/modules/_clients.scss */
+[data-anchor="clients-page"] .tabs-component.right .tabs-content-bar {
+  width: 100%;
+  padding-left: 1rem;
+  padding-top: 1rem;
+}
+
+@media only screen and (max-width: 767.98px) {
+  /* line 1, src/sass/modules/_gallery.scss */
+  [data-anchor="gallery-page"] {
+    background-position: 3rem 98%;
+  }
+}
+
+/* line 7, src/sass/modules/_gallery.scss */
+[data-anchor="gallery-page"] .gallery-component {
+  margin-top: 7%;
+  height: 83%;
+}
+
+/* line 11, src/sass/modules/_gallery.scss */
+[data-anchor="gallery-page"] .gallery-component .tabs-component {
+  display: none;
+}
+
+@media only screen and (max-width: 767.98px) {
+  /* line 7, src/sass/modules/_gallery.scss */
+  [data-anchor="gallery-page"] .gallery-component {
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 1rem 1rem 50px;
+    background: url("../img/mobile/background/bg_common.png") no-repeat 3rem bottom #fff;
+    background-size: contain;
+  }
+  /* line 22, src/sass/modules/_gallery.scss */
+  [data-anchor="gallery-page"] .gallery-component .tabs-component {
+    display: block;
+  }
+}
+
+/* line 28, src/sass/modules/_gallery.scss */
+[data-anchor="gallery-page"] .owl-item {
+  margin: 0 15px;
+}
+
+/* line 32, src/sass/modules/_gallery.scss */
+[data-anchor="gallery-page"] img {
+  margin: 1.5rem 0;
+}
+
+/* line 41, src/sass/modules/_gallery.scss */
+#gallery-carousel.owl-carousel {
+  display: block;
+}
+
+/* line 43, src/sass/modules/_gallery.scss */
+#gallery-carousel .owl-prev {
+  left: 0;
+  background: url("../img/nav/arrow-left.png") no-repeat center center;
+}
+
+/* line 47, src/sass/modules/_gallery.scss */
+#gallery-carousel .owl-next {
+  right: 0;
+  background: url("../img/nav/arrow-right.png") no-repeat center center;
+}
+
+/* line 52, src/sass/modules/_gallery.scss */
+#gallery-carousel .owl-prev,
+#gallery-carousel .owl-next {
+  position: absolute;
+  top: 0;
+  width: 15.6rem;
+  height: 49%;
+  margin: 0;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* line 61, src/sass/modules/_gallery.scss */
+#gallery-carousel .owl-prev:focus,
+#gallery-carousel .owl-next:focus {
+  outline: none;
+}
+
+/* line 65, src/sass/modules/_gallery.scss */
+#gallery-carousel .owl-prev span,
+#gallery-carousel .owl-next span {
+  display: none;
+}
+
+@media only screen and (max-width: 767.98px) {
+  /* line 71, src/sass/modules/_gallery.scss */
+  #gallery-carousel .col-sm-6 {
+    width: 50%;
+    float: left;
+  }
+  /* line 74, src/sass/modules/_gallery.scss */
+  #gallery-carousel .col-sm-6 img {
+    margin: .9rem 0;
+  }
+}
+
+/* line 4, src/sass/modules/_contact.scss */
+[data-anchor="contact-page"] {
+  /* height: auto !important; */
+}
+
+@media only screen and (max-width: 767.98px) {
+  /* line 9, src/sass/modules/_contact.scss */
+  [data-anchor="contact-page"] .collapse-component {
+    margin-left: 20px;
+  }
+}
+
+/* line 14, src/sass/modules/_contact.scss */
+[data-anchor="contact-page"] h1 {
+  font-size: 2rem;
+}
+
+@media only screen and (min-width: 1367px) {
+  /* line 14, src/sass/modules/_contact.scss */
+  [data-anchor="contact-page"] h1 {
+    font-size: 2.8rem;
+  }
+}
+
+/* line 20, src/sass/modules/_contact.scss */
+[data-anchor="contact-page"] h3 {
+  font-size: 1.04rem;
+  letter-spacing: 2.5px;
+  color: #c5c7c9;
+}
+
+@media only screen and (min-width: 1367px) {
+  /* line 20, src/sass/modules/_contact.scss */
+  [data-anchor="contact-page"] h3 {
+    font-size: 1.456rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  /* line 28, src/sass/modules/_contact.scss */
+  .contact-us-component {
+    margin-top: 4rem;
+  }
+}
+
+@media only screen and (max-width: 767.98px) {
+  /* line 28, src/sass/modules/_contact.scss */
+  .contact-us-component {
+    margin-bottom: 20px;
+    padding-bottom: 50px;
+    background: url("../img/mobile/background/bg_common.png") no-repeat 3rem bottom #fff;
+    background-size: contain;
+  }
+  /* line 39, src/sass/modules/_contact.scss */
+  .contact-us-component h1 {
+    background-color: #ce9246;
+    padding: 1rem;
+    text-align: center;
+  }
+  /* line 45, src/sass/modules/_contact.scss */
+  .contact-us-component h3 {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 1367px) {
+  /* line 28, src/sass/modules/_contact.scss */
+  .contact-us-component {
+    margin-top: 13rem;
+  }
+}
+
+/* line 54, src/sass/modules/_contact.scss */
+.contact-us-component .contact-header {
+  background-color: #ce9246;
+}
+
+/* line 58, src/sass/modules/_contact.scss */
+.contact-us-component .contact-header-link {
+  font-size: 0.8041666667rem;
+  letter-spacing: 1px;
+  color: #fff;
+}
+
+@media only screen and (min-width: 1367px) {
+  /* line 58, src/sass/modules/_contact.scss */
+  .contact-us-component .contact-header-link {
+    font-size: 1.1258333333rem;
+  }
+}
+
+/* line 64, src/sass/modules/_contact.scss */
+.contact-us-component .contact-header-link:hover {
+  text-decoration: none;
+}
+
+/* line 70, src/sass/modules/_contact.scss */
+.contact-us-component i {
+  float: right;
+  font-size: 2rem;
+  line-height: 1rem;
+}
+
+@media only screen and (min-width: 1367px) {
+  /* line 70, src/sass/modules/_contact.scss */
+  .contact-us-component i {
+    font-size: 2.5rem;
+    line-height: 1.5rem;
+  }
+}
+
+/* line 82, src/sass/modules/_contact.scss */
+#contact-form-container {
+  background-color: #fff;
+}
+
+/* line 85, src/sass/modules/_contact.scss */
+#contact-form-container .border-bottom {
+  border-bottom: 1px solid #b4b5b7;
+}
+
+/* line 89, src/sass/modules/_contact.scss */
+#contact-form-container .border-left {
+  border-left: 1px solid #b4b5b7;
+}
+
+/* line 93, src/sass/modules/_contact.scss */
+#contact-form-container textarea {
+  height: 90px;
+}
+
+/* line 97, src/sass/modules/_contact.scss */
+#contact-form-container .form-control {
+  font-size: 0.8041666667rem;
+  letter-spacing: 1px;
+  border: none;
+  border-radius: 0;
+}
+
+@media only screen and (min-width: 1367px) {
+  /* line 97, src/sass/modules/_contact.scss */
+  #contact-form-container .form-control {
+    font-size: 1.1258333333rem;
+  }
+}
+
+/* line 105, src/sass/modules/_contact.scss */
+#contact-form-container .form-control,
+#contact-form-container .btn {
+  color: #929497;
+  border-radius: 0;
+}
+
+/* line 111, src/sass/modules/_contact.scss */
+#contact-form-container .error {
+  display: none;
+  color: #FF0000;
+  font-size: .6rem;
+}
+
+/* line 117, src/sass/modules/_contact.scss */
+#contact-form-container .form-status {
+  margin-right: 10px;
+  color: #929497;
+}
+
+/* line 4, src/sass/modules/_non-govt-carousel.scss */
+#govt-carousel.owl-carousel, #govt-carousel.owl-carousel.owl-loaded,
+#non-govt-carousel.owl-carousel,
+#non-govt-carousel.owl-carousel.owl-loaded {
+  display: flex;
+  padding-left: 15px;
+  padding-bottom: 30px;
+}
+
+/* line 11, src/sass/modules/_non-govt-carousel.scss */
+#govt-carousel .owl-prev,
+#non-govt-carousel .owl-prev {
+  left: 0;
+  background: url("../img/nav/arrow-left.png") no-repeat center center;
+}
+
+/* line 15, src/sass/modules/_non-govt-carousel.scss */
+#govt-carousel .owl-next,
+#non-govt-carousel .owl-next {
+  right: 0;
+  background: url("../img/nav/arrow-right.png") no-repeat center center;
+}
+
+/* line 20, src/sass/modules/_non-govt-carousel.scss */
+#govt-carousel .owl-prev,
+#govt-carousel .owl-next,
+#non-govt-carousel .owl-prev,
+#non-govt-carousel .owl-next {
+  position: absolute;
+  top: 0;
+  width: 15.6rem;
+  height: 100%;
+  margin: 0;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* line 29, src/sass/modules/_non-govt-carousel.scss */
+#govt-carousel .owl-prev:focus,
+#govt-carousel .owl-next:focus,
+#non-govt-carousel .owl-prev:focus,
+#non-govt-carousel .owl-next:focus {
+  outline: none;
+}
+
+/* line 33, src/sass/modules/_non-govt-carousel.scss */
+#govt-carousel .owl-prev span,
+#govt-carousel .owl-next span,
+#non-govt-carousel .owl-prev span,
+#non-govt-carousel .owl-next span {
+  display: none;
+}
+
+/* Video Gallery and Modal window */
+/* line 1, src/sass/modules/_carousel-wrapper.scss */
+#videoModal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 100%;
+  padding: 0;
+  background: #bae2e2;
+  z-index: 10000;
+  text-align: center;
+}
+
+/* line 12, src/sass/modules/_carousel-wrapper.scss */
+#videoModal:before {
+  content: " ";
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+}
+
+/* line 19, src/sass/modules/_carousel-wrapper.scss */
+#videoModal .video-container {
+  width: 80%;
+  height: 80%;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* line 26, src/sass/modules/_carousel-wrapper.scss */
+#videoModal video {
+  object-fit: cover;
+}
+
+/* line 30, src/sass/modules/_carousel-wrapper.scss */
+#videoModal #close-carousel-btn,
+#videoModal #close-video-btn {
+  font-size: 1.2rem;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  z-index: 2;
+  color: #fff;
+}
+
+/* line 39, src/sass/modules/_carousel-wrapper.scss */
+#videoModal #close-carousel-btn:hover,
+#videoModal #close-video-btn:hover {
+  text-decoration: none;
+}
+
+/* line 1, src/sass/modules/_scroll-btn.scss */
+.scroll-btn {
+  cursor: pointer;
+  z-index: 10;
+  position: fixed;
+  bottom: 30px;
+  background: transparent;
+  border: none;
+}
+
+/* line 8, src/sass/modules/_scroll-btn.scss */
+.scroll-btn:focus {
+  outline: none;
+}
+
+/* line 13, src/sass/modules/_scroll-btn.scss */
+#scroll-up-btn {
+  left: 30px;
+}
+
+/* line 17, src/sass/modules/_scroll-btn.scss */
+#scroll-down-btn {
+  right: 30px;
+  -webkit-animation-direction: reverse;
+  -moz-animation-direction: reverse;
+  -o-animation-direction: reverse;
+  -ms-animation-direction: reverse;
+  animation-direction: reverse;
+}
+
+/* ANIMATION FOR SCROLL BUTTONS */
+/* line 28, src/sass/modules/_scroll-btn.scss */
+.scroll-btn {
+  animation: animationFrames ease-in 1s;
+  animation-iteration-count: infinite;
+  transform-origin: 50% 50%;
+  -webkit-animation: animationFrames ease-in 1s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-transform-origin: 50% 50%;
+  -moz-animation: animationFrames ease-in 1s;
+  -moz-animation-iteration-count: infinite;
+  -moz-transform-origin: 50% 50%;
+  -o-animation: animationFrames ease-in 1s;
+  -o-animation-iteration-count: infinite;
+  -o-transform-origin: 50% 50%;
+  -ms-animation: animationFrames ease-in 1s;
+  -ms-animation-iteration-count: infinite;
+  -ms-transform-origin: 50% 50%;
+}
+
+@keyframes animationFrames {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  30% {
+    transform: translate(0px, 10px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+
+@-moz-keyframes animationFrames {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  30% {
+    transform: translate(0px, 10px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+
+@-webkit-keyframes animationFrames {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  30% {
+    transform: translate(0px, 10px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+
+@-o-keyframes animationFrames {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  30% {
+    transform: translate(0px, 10px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+
+@-ms-keyframes animationFrames {
+  /* line 71, src/sass/modules/_scroll-btn.scss */
+  0% {
+    transform: translate(0px, 0px);
+  }
+  /* line 72, src/sass/modules/_scroll-btn.scss */
+  30% {
+    transform: translate(0px, 10px);
+  }
+  /* line 73, src/sass/modules/_scroll-btn.scss */
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+
+/* line 1, src/sass/modules/_footer.scss */
+footer {
+  color: #929497;
+  padding: 10px;
+  background-color: #000;
+}
