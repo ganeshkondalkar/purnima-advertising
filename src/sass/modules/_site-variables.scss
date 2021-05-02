@@ -1,0 +1,71 @@
+$base-color: #404041 !global;
+
+%mont-serrate {
+    font-family: 'Montserrat', sans-serif;
+}
+
+%clr-white {
+    color: #fff;
+}
+
+%font-bold {
+    font-weight: 700;
+}
+
+%base-text-clr {
+    color: $base-color;
+}
+
+%clr-white-bold {
+    @extend %clr-white;
+    @extend %font-bold;
+}
+
+%mont-serrate-medium-bold {
+    @extend %mont-serrate;
+    font-weight: 500;
+}
+
+%mont-serrate-semi-bold {
+    @extend %mont-serrate;
+    font-weight: 600;
+}
+
+%mont-serrate-bold {
+    @extend %mont-serrate;
+    @extend %font-bold;
+}
+
+%mont-serrate-bold-white {
+    @extend %mont-serrate;
+    @extend %clr-white-bold;
+}
+
+%img {
+    border: 0;
+    height: auto;
+    width: 100%;
+}
+
+%pull-left {
+    float: left !important;
+}
+
+%pull-right {
+    float: right !important;
+}
+
+/*
+    Font pt to px to rem
+    12pt = 16px = 1rem
+    (($pt * 16px) / 12pt) / 16px = ??rem
+*/
+
+@mixin font-sizer($pt){
+    $currSize: ( ($pt * 16) / 12 ) / 16;
+    font-size: #{$currSize}rem;
+
+    @media only screen and (min-width: 1367px) {
+        font-size: #{$currSize * 1.4}rem;
+    }
+}

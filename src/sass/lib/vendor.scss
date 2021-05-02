@@ -1,0 +1,46 @@
+/*---------------------------------------------------------
+ 1. Bootstrap
+-------------------------------------------------------- */
+@import '../../../node_modules/bootstrap/scss/bootstrap';
+/*@import 'bootstrap/bootstrap-theme.min';*/
+
+/*---------------------------------------------------------
+ 2. Slidebars
+-------------------------------------------------------- */
+@import '../../../node_modules/Slidebars/dist/slidebars';
+
+
+/*---------------------------------------------------------
+ 3. Custom Scrollbar
+-------------------------------------------------------- */
+@import '../../../node_modules/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar';
+
+
+
+/*---------------------------------------------------------
+ 4. Owl Carousel
+-------------------------------------------------------- */
+@import '../../../node_modules/owl.carousel/src/scss/owl.carousel';
+@import '../../../node_modules/owl.carousel/src/scss/owl.theme.default';
+
+
+/*---------------------------------------------------------
+ 2. RevealJS
+@import '../../../node_modules/reveal.js/css/reveal.scss';
+@import '../../../node_modules/reveal.js/css/theme/source/white';
+-------------------------------------------------------- */
+
+
+/*---------------------------------------------------------
+ 3. FullPage.JS
+-------------------------------------------------------- */
+/*@import '../../../node_modules/fullpage.js/dist/fullpage';*/
+
+
+/*---------------------------------------------------------
+ 4. Font Awesome
+-------------------------------------------------------- */
+/* $fa-font-path: "../../fonts/fontawesome" !global;
+@import '../../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome';
+@import '../../../node_modules/@fortawesome/fontawesome-free/scss/solid';
+ */

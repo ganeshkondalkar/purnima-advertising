@@ -1,0 +1,80 @@
+[data-anchor="gallery-page"] {
+
+    @media only screen and (max-width: 767.98px){
+        background-position: 3rem 98%;
+    }
+
+    .gallery-component {
+        margin-top: 7%;
+        height: 83%;
+
+        .tabs-component {
+            display: none;
+        }
+
+        @media only screen and (max-width: 767.98px){
+            display: inline-block;
+            margin-bottom: 20px;
+            padding: 1rem 1rem 50px;
+            background: url("../img/mobile/background/bg_common.png") no-repeat 3rem bottom #fff;
+            background-size: contain;
+
+            .tabs-component {
+                display: block;
+            }
+        }
+    }
+
+    .owl-item {
+         margin: 0 15px;
+    }
+
+    img {
+        @extend %img;
+        margin: 1.5rem 0;
+    }
+
+}
+
+#gallery-carousel {
+
+    &.owl-carousel { display: block; }
+
+    .owl-prev {
+        left: 0;
+        background: url('../img/nav/arrow-left.png') no-repeat center center;
+    }
+    .owl-next {
+        right: 0;
+        background: url('../img/nav/arrow-right.png') no-repeat center center;
+    }
+
+    .owl-prev,
+    .owl-next {
+        position: absolute;
+        top: 0;
+        width: 15.6rem;
+        height: 49%;
+        margin: 0;
+        background-color: rgba(255, 255, 255, 0.5);
+
+        &:focus {
+            outline: none;
+        }
+
+        span {
+            display: none;
+        }
+    }
+
+    @media only screen and (max-width: 767.98px){
+        .col-sm-6 {
+            width: 50%; float: left;
+
+            img {
+                margin: .9rem 0;
+            }
+        }
+    }
+
+}

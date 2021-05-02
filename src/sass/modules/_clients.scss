@@ -1,0 +1,28 @@
+[data-anchor="clients-page"] {
+
+    .col-md-1 {
+        @media only screen and (min-width: 768px) {
+            flex: 0 0 10%;
+            max-width: 10%;
+        }
+    }
+
+    .tabs-component {
+
+        &.right {
+
+            .tabs-content-bar {
+                width: 100%;
+                padding-left: 1rem;
+                padding-top: 1rem;
+            }
+
+            img {
+                @extend %img;
+            }
+
+        }
+
+    }
+
+}

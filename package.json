@@ -1,0 +1,45 @@
+{
+  "name": "purnima-advertising",
+  "version": "1.0.0",
+  "projectDetails": {
+    "startDate": "April 01st, 2019",
+    "renewalRequiredOn": "March 31st, 2022",
+    "endDate": "March 31st, 2022"
+  },
+  "description": "Purnima Advertising Website",
+  "main": "index.js",
+  "scripts": {
+    "serveDev": "grunt dev",
+    "serveProd": "grunt build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ganeshkondalkar@gmail.com",
+  "license": "ISC",
+  "devDependencies": {
+    "connect-livereload": "^0.6.1",
+    "grunt": "^1.0.4",
+    "grunt-contrib-clean": "^2.0.0",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-connect": "^2.1.0",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-htmlmin": "^3.1.0",
+    "grunt-contrib-uglify": "^4.0.1",
+    "grunt-contrib-watch": "^1.1.0",
+    "grunt-open": "^0.2.4",
+    "grunt-sass": "^3.1.0",
+    "jquery-cycle-2": "^1.0.3",
+    "node-sass": "^4.13.1",
+    "serve-static": "^1.14.1"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.12.1",
+    "Slidebars": "^2.0.0",
+    "bootstrap": "^4.4.1",
+    "fullpage.js": "^3.0.8",
+    "jquery": "^3.4.1",
+    "malihu-custom-scrollbar-plugin": "^3.1.5",
+    "owl.carousel": "^2.3.4",
+    "popper.js": "^1.16.1",
+    "reveal.js": "^3.9.2"
+  }
+}
